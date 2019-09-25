@@ -20,8 +20,8 @@ class CookieBanner extends React.Component {
 
   componentDidMount() {
     const cookies = new Cookies();
+
     const accepted = cookies.get("has-accepted-cookies");
-    console.log(window.document);
 
     // banner hidden by default
     // if not accepted, show the banner
@@ -84,10 +84,8 @@ class CookieBanner extends React.Component {
       !this.state.hidden && (
         <CookieBannerStyled data-testid="cookie-banner">
           <CookieBannerTextStyled>
-            <p>
-              This website uses cookies. By continuing to browse the site you
-              are agreeing to our use of cookies.
-            </p>
+            This website uses cookies. By continuing to browse the site you are
+            agreeing to our use of cookies.
           </CookieBannerTextStyled>
           <CookieBannerButtonsStyled>
             <a href="/cookies">
